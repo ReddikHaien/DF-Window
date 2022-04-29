@@ -20,7 +20,7 @@ namespace ModelImplementation
             bottom.CreateNewUvs();
         }
 
-        public override string Name => "Tourmaline";
+        public override string Name => "TourmalineWall";
 
         public override void AddMesh(RemoteManager remote, World world, Vector3Int chunkPosition, Vector3Int tilePosition, Tile tile, List<Vector3> verts, List<Vector2> uvs, List<int> indices, Dictionary<string,Vector4> baseColors, MaterialManager materialManager)
         {

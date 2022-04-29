@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -67,6 +68,9 @@ public class Chunk : MonoBehaviour, ChunkEvent
         StartCoroutine(nameof(WaiterRoutine));
     }
 
+
+    public static ConcurrentDictionary<string,byte> missingEls = new ConcurrentDictionary<string, byte>();
+
     IEnumerator WaiterRoutine(){
         var verts = new List<Vector3>();
         var uvs = new List<Vector2>();
@@ -89,5 +93,12 @@ public class Chunk : MonoBehaviour, ChunkEvent
         mesh.triangles = inds.ToArray();
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
+
+        foreach(var x in missingEls){
+            if (x.Value == 0){
+                Debug.Log($"missing {x.Key}");
+                missingEls[x.Key] = 1;
+            }
+        }
     }
 }

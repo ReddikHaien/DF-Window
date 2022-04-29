@@ -1,82 +1,55 @@
 {
+    "defaults": {
+        "category": "wood",
+        "shapes": {
+            "wall": {
+                "model":"WoodWall",
+                "coloring": {
+                    "wood":"DatePalmWood"
+                },
+                "shape":"WoodWall"
+            }
+        }
+    },
     "definitions": {
         "date palm plant": {
-            "category": "wood",
-            "defaultTexture": "DatePalmBark",
-            "shapes": {
-                "wall": {
-                    "model": "WoodWall",
-                    "shape": "WoodWall",
-                    "coloring": {
-                        "wood": "DatePalmWood"
-                    }
-                }
-            }
+            "defaultTexture": "DatePalmBark"
         },
         "round lime tree plant": {
-            "category": "wood",
-            "defaultTexture": "RoundLimeBark",
-            "shapes": {
-                "wall": {
-                    "model": "WoodWall",
-                    "shape": "WoodWall",
-                    "coloring": {
-                        "wood": "DatePalmWood"
-                    }
-                }
-            }
+            "defaultTexture": "RoundLimeBark"
         },
         "kumquat tree plant": {
-            "category": "wood",
-            "defaultTexture": "KumQuatTreeBark",
-            "shapes": {
-                "wall": {
-                    "model": "WoodWall",
-                    "shape": "WoodWall",
-                    "coloring": {
-                        "wood": "DatePalmWood"
-                    }
-                }
-            }
+            "defaultTexture": "KumQuatTreeBark"
         },
         "coffee tree plant": {
-            "category": "wood",
-            "defaultTexture": "CoffeeTreeBark",
-            "shapes": {
-                "wall": {
-                    "model": "WoodWall",
-                    "shape": "WoodWall",
-                    "coloring": {
-                        "wood": "DatePalmWood"
-                    }
-                }
-            }
+            "defaultTexture": "CoffeeTreeBark"
+        },
+        "apple tree plant": {
+            "defaultTexture": "CoffeeTreeBark"
         },
         "willow plant": {
-            "category": "wood",
-            "defaultTexture": "WillowBark",
-            "shapes": {
-                "wall": {
-                    "model": "WoodWall",
-                    "shape": "WoodWall",
-                    "coloring": {
-                        "wood": "DatePalmWood"
-                    }
-                }
-            }
+            "defaultTexture": "WillowBark"
+        },
+        "plum tree plant": {
+            "defaultTexture": "WillowBark"
         },
         "custard-apple tree plant": {
-            "category": "wood",
-            "defaultTexture": "CustardAppleTreeBark",
-            "shapes": {
-                "wall": {
-                    "model": "WoodWall",
-                    "shape": "WoodWall",
-                    "coloring": {
-                        "wood": "DatePalmWood"
-                    }
-                }
-            }
+            "defaultTexture": "CustardAppleTreeBark"
+        },
+        "hazel tree plant": {
+            "defaultTexture": "HazelTreeBark"
+        },
+        "almond tree plant": {
+            "defaultTexture": "AlmondTreeBark"
+        },
+        "ash plant": {
+            "defaultTexture": "AshTreeBark"
+        },
+        "bayberry tree plant": {
+            "defaultTexture": "BayBerryTreeBark"
+        },
+        "oak plant": {
+            "defaultTexture": "OakTreeBark"
         }
     }
 }

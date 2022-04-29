@@ -1,44 +1,47 @@
 {
+    "defaults": {
+        "category": "stone",
+        "shapes": {
+            "wall":{
+                "model": "Wall",
+                "shape": "Wall"
+            }
+        }
+    },
     "definitions": {
         "siltstone": {
-            "category": "stone",
-            "defaultTexture": "Siltstone",
-            "shapes": {
-                "wall": {
-                    "model": "Wall",
-                    "shape": "Wall"
-                }
-            }
+            "defaultTexture": "Siltstone"
         },
         "bauxite": {
             "category": "stone",
-            "defaultTexture": "Bauxite",
-            "shapes":{
-                "wall": {
-                    "model": "Wall",
-                    "shape": "Wall"
-                }
-            }
+            "defaultTexture": "Bauxite"
         },
         "white sand":{
-            "category": "stone",
-            "defaultTexture": "WhiteSand",
-            "shapes": {
-                "wall": {
-                    "model": "Wall",
-                    "shape": "Wall"
-                }
-            }
+            "defaultTexture": "WhiteSand"
         },
         "clay loam":{
-            "category": "stone",
-            "defaultTexture": "ClayLoam",
-            "shapes": {
-                "wall": {
-                    "model": "Wall",
-                    "shape": "Wall"
-                }
-            }
-        }
+            "defaultTexture": "ClayLoam"
+        },
+        "sand":{
+            "defaultTexture": "Sand"
+        },
+        "loamy sand":{
+            "defaultTexture": "LoamySand"
+        },
+        "peat":{
+            "defaultTexture": "Peat"
+        },
+        "rock salt":{
+            "defaultTexture": "RockSalt"
+        },
+        "hematite":{
+            "defaultTexture": "Hematite"
+        },
+        "sardonyx":{ "defaultTexture": "RedTourmaline" },
+        "lignite": { "defaultTexture": "Lignite" },
+        "diorite": { "defaultTexture": "Diorite" },
+        "microcline": { "defaultTexture": "Microcline" },
+        "gabbro": { "defaultTexture": "Gabbro" },
+        "olivine": { "defaultTexture": "Olivine" }
     }
 }

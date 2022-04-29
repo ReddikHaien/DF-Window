@@ -72,11 +72,11 @@ namespace TileDataBuilder{
 
                 foreach(var modelEntry in obj.Models){
                     var (shape, model, coloring) = modelEntry.Value;
+                    shape = shape ?? "Empty";
+                    model = model ?? "Empty";
                     var uvList = new Dictionary<string,Vector4>();
                     var abstractModel = this.models.TryGetValue(model, out var x) ? x : null;
                     var abstractShape = shapes.TryGetValue(shape, out var y) ? y : null;
-
-                    //Debug.Log($"{shape} => {abstractShape}, {model} => {abstractModel}");
 
                     foreach(var color in coloring){
                         uvList[color.Key] = textureBuilder.GetUv(color.Value.Name);

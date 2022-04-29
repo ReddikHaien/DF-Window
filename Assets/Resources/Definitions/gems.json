@@ -1,24 +1,61 @@
 {
+    "defaults": {
+        "category": "crystal",
+        "shapes": {
+            "wall":{
+                "shape":"Empty"
+            }
+        }
+    },
     "definitions": {
         "clear tourmaline": {
-            "category": "crystal",
             "defaultTexture": "ClearTourmaline",
             "shapes": {
                 "wall": {
-                    "model": "Tourmaline",
-                    "shape": "Empty"
+                    "model": "TourmalineWall"
                 }
             }
         },
         "red tourmaline": {
-            "category": "crystal",
             "defaultTexture": "RedTourmaline",
             "shapes": {
                 "wall": {
-                    "model": "Tourmaline",
-                    "shape": "Empty"
+                    "model": "TourmalineWall"
                 }
             }
+        },
+        "green tourmaline": {
+            "defaultTexture": "GreenTourmaline",
+            "shapes": {
+                "wall": {
+                    "model": "TourmalineWall"
+                }
+            }
+        },
+        "picture jasper": {
+            "defaultTexture": "PictureJasper",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "green zircon": {
+            "defaultTexture": "GreenZircon",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
+        },
+        "tanzanite": {
+            "defaultTexture": "Tanzanite",
+            "shapes": {"wall": {"model": "TanzaniteWall"}}
+        },
+        "purple spinel":{
+            "defaultTexture": "PurpleSpinel",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
+        },
+        "rose quartz": {
+            "defaultTexture": "RoseQuartz",
+            "shapes": {"wall": {"model": "TanzaniteWall"}}
         }
     }
 }
