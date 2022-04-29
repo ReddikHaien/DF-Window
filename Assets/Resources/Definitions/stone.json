@@ -1,0 +1,44 @@
+{
+    "definitions": {
+        "siltstone": {
+            "category": "stone",
+            "defaultTexture": "Siltstone",
+            "shapes": {
+                "wall": {
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "bauxite": {
+            "category": "stone",
+            "defaultTexture": "Bauxite",
+            "shapes":{
+                "wall": {
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "white sand":{
+            "category": "stone",
+            "defaultTexture": "WhiteSand",
+            "shapes": {
+                "wall": {
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "clay loam":{
+            "category": "stone",
+            "defaultTexture": "ClayLoam",
+            "shapes": {
+                "wall": {
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        }
+    }
+}

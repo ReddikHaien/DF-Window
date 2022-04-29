@@ -1,0 +1,82 @@
+{
+    "definitions": {
+        "date palm plant": {
+            "category": "wood",
+            "defaultTexture": "DatePalmBark",
+            "shapes": {
+                "wall": {
+                    "model": "WoodWall",
+                    "shape": "WoodWall",
+                    "coloring": {
+                        "wood": "DatePalmWood"
+                    }
+                }
+            }
+        },
+        "round lime tree plant": {
+            "category": "wood",
+            "defaultTexture": "RoundLimeBark",
+            "shapes": {
+                "wall": {
+                    "model": "WoodWall",
+                    "shape": "WoodWall",
+                    "coloring": {
+                        "wood": "DatePalmWood"
+                    }
+                }
+            }
+        },
+        "kumquat tree plant": {
+            "category": "wood",
+            "defaultTexture": "KumQuatTreeBark",
+            "shapes": {
+                "wall": {
+                    "model": "WoodWall",
+                    "shape": "WoodWall",
+                    "coloring": {
+                        "wood": "DatePalmWood"
+                    }
+                }
+            }
+        },
+        "coffee tree plant": {
+            "category": "wood",
+            "defaultTexture": "CoffeeTreeBark",
+            "shapes": {
+                "wall": {
+                    "model": "WoodWall",
+                    "shape": "WoodWall",
+                    "coloring": {
+                        "wood": "DatePalmWood"
+                    }
+                }
+            }
+        },
+        "willow plant": {
+            "category": "wood",
+            "defaultTexture": "WillowBark",
+            "shapes": {
+                "wall": {
+                    "model": "WoodWall",
+                    "shape": "WoodWall",
+                    "coloring": {
+                        "wood": "DatePalmWood"
+                    }
+                }
+            }
+        },
+        "custard-apple tree plant": {
+            "category": "wood",
+            "defaultTexture": "CustardAppleTreeBark",
+            "shapes": {
+                "wall": {
+                    "model": "WoodWall",
+                    "shape": "WoodWall",
+                    "coloring": {
+                        "wood": "DatePalmWood"
+                    }
+                }
+            }
+        }
+    }
+}

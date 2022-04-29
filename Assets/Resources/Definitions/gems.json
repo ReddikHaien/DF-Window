@@ -1,0 +1,24 @@
+{
+    "definitions": {
+        "clear tourmaline": {
+            "category": "crystal",
+            "defaultTexture": "ClearTourmaline",
+            "shapes": {
+                "wall": {
+                    "model": "Tourmaline",
+                    "shape": "Empty"
+                }
+            }
+        },
+        "red tourmaline": {
+            "category": "crystal",
+            "defaultTexture": "RedTourmaline",
+            "shapes": {
+                "wall": {
+                    "model": "Tourmaline",
+                    "shape": "Empty"
+                }
+            }
+        }
+    }
+}
