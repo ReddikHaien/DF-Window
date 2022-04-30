@@ -92,7 +92,14 @@ namespace TileDataBuilder{
                 );
             }
             
-            var materialManager = new MaterialManager(materials,(shapes["Empty"],models["Empty"],new Dictionary<string, Vector4>()));
+            var materialManager = new MaterialManager(
+            materials,
+            new MaterialEntry2(
+                textureBuilder.GetUv("DefaultTexture"),
+                new Dictionary<RemoteFortressReader.TiletypeShape, (AbstractShape, AbstractModel, Dictionary<string, Vector4>)>(),
+                MaterialManager.MaterialCategory.Stone
+            ),
+            (shapes["Empty"],models["Empty"],new Dictionary<string, Vector4>()));
             var textureManager = new TextureManager(texture);
 
             return (textureManager, materialManager);

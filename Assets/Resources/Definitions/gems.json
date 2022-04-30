@@ -32,6 +32,14 @@
                 }
             }
         },
+        "indigo tourmaline": {
+            "defaultTexture": "IndigoTourmaline",
+            "shapes": {
+                "wall": {
+                    "model": "TourmalineWall"
+                }
+            }
+        },
         "picture jasper": {
             "defaultTexture": "PictureJasper",
             "shapes":{
@@ -45,6 +53,10 @@
             "defaultTexture": "GreenZircon",
             "shapes": { "wall":  { "model": "ZirconWall" }}
         },
+        "brown zircon": {
+            "defaultTexture": "BrownZircon",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
+        },
         "tanzanite": {
             "defaultTexture": "Tanzanite",
             "shapes": {"wall": {"model": "TanzaniteWall"}}
@@ -56,6 +68,135 @@
         "rose quartz": {
             "defaultTexture": "RoseQuartz",
             "shapes": {"wall": {"model": "TanzaniteWall"}}
+        },
+        "goshenite":{
+            "defaultTexture": "Goshenite",
+            "shapes": { "wall": {"model": "TourmalineWall"} }
+        },
+        "rhodolite": {
+            "defaultTexture": "Rhodolite",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "citrine": {
+            "defaultTexture": "Citrine",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
+        },
+        "yellow zircon": {
+            "defaultTexture": "YellowZircon",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
+        },
+        "red zircon": {
+            "defaultTexture": "RedZircon",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
+        },
+        "yellow spessartine": {
+            "defaultTexture": "YellowSpessartine",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
+        },
+        "amethyst": {
+            "defaultTexture": "Amethyst",
+            "shapes": { "wall": { "model": "TanzaniteWall" } }
+        },
+        "lapis lazuli": {
+            "defaultTexture": "LapisLazuli",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "schorl": {
+            "defaultTexture": "Schorl",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "carnelian": {
+            "defaultTexture": "Carnelian",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "morion": {
+            "defaultTexture": "Morion",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "prase": {
+            "defaultTexture": "Prase",
+            "shapes": { "wall": { "model": "TanzaniteWall" } }
+        },
+        "pink garnet":{
+            "defaultTexture": "PinkGarnet",
+            "shapes": { "wall":  { "model": "GarnetWall" }}
+        },
+        "almandine": {
+            "defaultTexture": "Almandine",
+            "shapes": { "wall":  { "model": "ZirconWall" }}    
+        },
+        "heliodor": {
+            "defaultTexture": "Prase",
+            "shapes": { "wall": { "model": "TourmalineWall" } }
+        },
+        "clear garnet": {
+            "defaultTexture": "ClearGarnet",
+            "shapes": { "wall": { "model": "GarnetWall" } }
+        },
+        "emerald": {
+            "defaultTexture": "GreenZircon",
+            "shapes": { "wall":  { "model": "TanzaniteWall" }}
+        },
+        "milk quartz": {
+            "defaultTexture": "ClearGarnet",
+            "shapes": { "wall":  { "model": "TanzaniteWall" }}
+        },
+        "rock crystal": {
+            "defaultTexture": "ClearGarnet",
+            "shapes": { "wall":  { "model": "GenericCrystal" }}    
+        },
+        "cat's eye": {
+            "defaultTexture": "CatsEye",
+            "shapes": { "wall": { "model": "GarnetWall" } }
+        },
+        "morganite": {
+            "defaultTexture": "RoseQuartz",
+            "shapes": { "wall": {"model": "TourmalineWall"} }
+        },
+        "blue garnet": {
+            "defaultTexture": "BlueGarnet",
+            "shapes": { "wall": { "model": "GarnetWall" } }
+        },
+        "moonstone": {
+            "defaultTexture": "Moonstone",
+            "shapes": { "wall": { "model": "TourmalineWall" } }
+        },
+        "jelly opal": {
+            "defaultTexture": "Moonstone",
+            "shapes": { "wall": { "model": "GarnetWall" } }
+        },
+        "levin opal": {
+            "defaultTexture": "LevinOpal",
+            "shapes": { "wall": { "model": "GarnetWall" } }    
+        },
+        "red flash opal": {
+            "defaultTexture": "RedFlashOpal",
+            "shapes": { "wall": { "model": "GarnetWall" } }    
         }
     }
 }

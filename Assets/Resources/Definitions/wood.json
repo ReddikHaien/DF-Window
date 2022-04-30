@@ -50,6 +50,25 @@
         },
         "oak plant": {
             "defaultTexture": "OakTreeBark"
+        },
+        "tunnel tube plant": {
+            "defaultTexture": "TunnelTube"
+        },
+        "black-cap plant":{
+            "defaultTexture": "BlackCapBark"
+        },
+        "spore tree plant":{
+            "defaultTexture": "SporeTreeBark"
+        },
+        "blood thorn plant":{
+            "defaultTexture": "BloodThornBark"
+        },
+        "fungiwood plant": {
+            "defaultTexture": "FungiwoodBark"
+        },
+        "goblin-cap plant": {
+            "defaultTexture": "GoblinCapBark"
         }
+        
     }
 }

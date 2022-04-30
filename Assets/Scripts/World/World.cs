@@ -44,6 +44,8 @@ public class World : MonoBehaviour, WorldEvent
         StartCoroutine(nameof(ChunkCreators));
     }
 
+    public int ChunkCount => size.x * (size.y / 16) * size.z;
+
     IEnumerator ChunkCreators(){
         for (int x = 0; x < size.x; x++){
             for (int y =  size.y/16-1; y >= 0; y--){

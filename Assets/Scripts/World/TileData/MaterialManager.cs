@@ -38,15 +38,16 @@ public class MaterialManager
 
     private readonly MaterialEntry DEFAULT_ENTRY;
 
-    private MaterialEntry2 defaultEntry = new MaterialEntry2(new Vector4(0,0,1,1),new Dictionary<RemoteFortressReader.TiletypeShape, (AbstractShape, AbstractModel, Dictionary<string, Vector4>)>(), MaterialCategory.Stone);
-
+    private readonly MaterialEntry2 defaultEntry;
     private readonly (AbstractShape,AbstractModel,Dictionary<string,Vector4>) defaultModelEntry;
     public MaterialManager(
         Dictionary<string,MaterialEntry2> entries,
+        MaterialEntry2 defaultMaterial,
         (AbstractShape,AbstractModel,Dictionary<string,Vector4>) defaultModelEntry
         ){
         this.entries2 = entries;
         this.defaultModelEntry = defaultModelEntry;
+        this.defaultEntry = defaultMaterial;
         MaterialEntry2.defaultModel = defaultModelEntry;
     }
 

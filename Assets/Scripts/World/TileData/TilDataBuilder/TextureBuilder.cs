@@ -17,6 +17,8 @@ namespace TileDataBuilder{
             size = 1;
             textures = new Dictionary<string, LoadableTexture>();
             uvs = new Dictionary<string, Vector4>();
+
+            textures["DefaultTexture"] = new ResourceTexture("DefaultTexture");
         }
 
         public void AddTexture(LoadableTexture texture){
@@ -27,7 +29,7 @@ namespace TileDataBuilder{
             textures.Add(texture.Name,texture);
         }
 
-        public Vector4 GetUv(string name) => uvs.TryGetValue(name, out var x) ? x : new Vector4(0,0,1,1);
+        public Vector4 GetUv(string name) => uvs.TryGetValue(name, out var x) ? x : uvs["DefaultTexture"];
 
         public Texture2D CreateTexture(){
 

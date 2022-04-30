@@ -42,6 +42,20 @@
         "diorite": { "defaultTexture": "Diorite" },
         "microcline": { "defaultTexture": "Microcline" },
         "gabbro": { "defaultTexture": "Gabbro" },
-        "olivine": { "defaultTexture": "Olivine" }
+        "olivine": { "defaultTexture": "Olivine" },
+        "cobaltite": { "defaultTexture": "Cobaltite" },
+        "schist": { "defaultTexture": "Schist" },
+        "rock": { "shapes": { "wall": {"model": "RockWall" } } },
+        "tetrahedrite": { "defaultTexture": "Tetrahedrite" },
+        "granite": {"defaultTexture": "Granite"},
+        "sphalerite": { "defaultTexture": "Sphalerite" },
+        "raw adamantine": { "defaultTexture": "RawAdamantine" },
+        "native gold": { "defaultTexture": "NativeGold" },
+        "bismuthinite": { "defaultTexture": "Bismuthinite" },
+        "galena": { "defaultTexture": "Galena" },
+        "graphite": { "defaultTexture": "Graphite" },
+        "orthoclase": { "defaultTexture": "Orthoclase" },
+        "native silver": { "defaultTexture": "NativeSilver" },
+        "slade": { "defaultTexture": "Slade" }
     }
 }

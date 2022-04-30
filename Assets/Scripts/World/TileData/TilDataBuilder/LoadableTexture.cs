@@ -23,6 +23,9 @@ namespace TileDataBuilder{
         {
             if (loadedTexture == null){
                 loadedTexture = Resources.Load<Texture2D>($"Textures/{name}");
+                if (loadedTexture == null){
+                    throw new System.Exception($"Invalid texture name {name}");
+                }
             }
 
             return loadedTexture;

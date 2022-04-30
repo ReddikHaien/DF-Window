@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using DwarfFortress.TileInfo;
 using UnityEngine;
@@ -70,6 +71,7 @@ public class Chunk : MonoBehaviour, ChunkEvent
 
 
     public static ConcurrentDictionary<string,byte> missingEls = new ConcurrentDictionary<string, byte>();
+    private static int completedChunks = 0;
 
     IEnumerator WaiterRoutine(){
         var verts = new List<Vector3>();
@@ -94,11 +96,17 @@ public class Chunk : MonoBehaviour, ChunkEvent
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 
-        foreach(var x in missingEls){
-            if (x.Value == 0){
-                Debug.Log($"missing {x.Key}");
-                missingEls[x.Key] = 1;
+        completedChunks++;
+        
+        Debug.Log($"completed {completedChunks}/{world.ChunkCount}");
+        
+        if (completedChunks >= world.ChunkCount){
+            var b = new StringBuilder();
+            foreach(var entry in missingEls){
+                b.Append(entry.Key);
+                b.Append('\n');
             }
+            Debug.Log(b.ToString());
         }
     }
 }

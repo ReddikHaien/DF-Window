@@ -31,7 +31,10 @@ public class TileDataManager
                 ("TourmalineWall",new TourmalineModel()),
                 ("ZirconWall", new ZirconWallModel()),
                 ("TanzaniteWall", new SimpleModel("TanzaniteWall",true)),
+                ("GarnetWall", new SimpleModel("GarnetWall", true)),
+                ("GenericCrystal", new SimpleModel("Crystal",true)),
                 ("WoodWall", new WoodWallModel()),
+                ("RockWall", new RockWallModel())
             }
         );
 
@@ -70,7 +73,8 @@ public class TileDataManager
         if  (matdef != null){
             var material = materialManager.GetMaterial2(matdef);
             if (materialManager.isDefaultMaterial(material) && shape == RemoteFortressReader.TiletypeShape.Wall){
-                Chunk.missingEls.TryAdd(matdef.Name,0);
+                var mat = matdef.Name;
+                Chunk.missingEls.TryAdd(mat,0);
             }
             var (_, model, coloring) = material.GetModelEntry(shape);
             model.AddMesh(remote,world,chunkPos, new Vector3Int(x,y,z),tile, verts, uvs, indices, coloring, materialManager);
