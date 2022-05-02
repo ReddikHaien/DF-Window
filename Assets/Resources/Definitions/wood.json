@@ -68,6 +68,15 @@
         },
         "goblin-cap plant": {
             "defaultTexture": "GoblinCapBark"
+        },
+        "tower-cap plant": {
+            "defaultTexture": "TowerCap"
+        },
+        "pomegranate tree plant":{
+            "defaultTexture": "PomegranateTreeBark"
+        },
+        "nether-cap plant": {
+            "defaultTexture": "NetherCap"
         }
         
     }

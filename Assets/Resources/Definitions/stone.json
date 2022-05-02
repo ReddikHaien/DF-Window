@@ -9,6 +9,14 @@
         }
     },
     "definitions": {
+        "empty": {
+            "shapes": {
+                "wall": {
+                    "model": "Empty",
+                    "shape": "Empty"
+                }
+            }
+        },
         "siltstone": {
             "defaultTexture": "Siltstone"
         },
@@ -56,6 +64,13 @@
         "graphite": { "defaultTexture": "Graphite" },
         "orthoclase": { "defaultTexture": "Orthoclase" },
         "native silver": { "defaultTexture": "NativeSilver" },
-        "slade": { "defaultTexture": "Slade" }
+        "slade": { "defaultTexture": "Slade" },
+        "hornblende": { "defaultTexture": "Hornblende" },
+        "quartzite": { "defaultTexture": "Quartzite" },
+        "pyrite": { "defaultTexture": "Pyrite" },
+        "mica": { "defaultTexture": "Mica" },
+        "tiger iron": { "defaultTexture": "TigerIron" },
+        "slate": { "defaultTexture": "Slate" },
+        "garnierite": { "defaultTexture": "Garnierite" }
     }
 }

@@ -29,10 +29,12 @@ namespace ModelImplementation{
             var bark = materialManager.GetMaterial2(remote.GetMaterialDefinition(tile.BaseMaterial)).DefaultTexture;
             var center = baseColors.TryGetValue("wood", out var x) ? x : bark;
 
+            
             middle.AddToMesh(verts,uvs,indices,bark,tp);
             if (world.IsSideVisible(wp + Vector3Int.up, AbstractShape.Direction.Down)){
                 top.AddToMesh(verts,uvs,indices,center,tp);
             }
+        
             if (world.IsSideVisible(wp + Vector3Int.down, AbstractShape.Direction.Up)){
                 bottom.AddToMesh(verts,uvs,indices,center,tp);
             }

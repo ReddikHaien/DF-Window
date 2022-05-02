@@ -47,8 +47,8 @@ public class World : MonoBehaviour, WorldEvent
     public int ChunkCount => size.x * (size.y / 16) * size.z;
 
     IEnumerator ChunkCreators(){
-        for (int x = 0; x < size.x; x++){
-            for (int y =  size.y/16-1; y >= 0; y--){
+        for (int y =  size.y/16-1; y >= 0; y--){
+            for (int x = 0; x < size.x; x++){
                 for (int z = 0; z < size.z; z++){
                     ExecuteEvents.Execute<WorldEvent>(this.gameObject,null,(w,d) => w.CreateChunk(
                         new Vector3(
@@ -94,6 +94,17 @@ public class World : MonoBehaviour, WorldEvent
 
             return shapeManager?.SideVisible(this,position,direction) ?? true;
         }
+    }
+
+    public bool isTileVisible(Vector3Int p){
+        return 
+            IsSideVisible(p + Vector3Int.up,AbstractShape.Direction.Down) ||
+            IsSideVisible(p + Vector3Int.down,AbstractShape.Direction.Up) ||
+            IsSideVisible(p + Vector3Int.forward,AbstractShape.Direction.Back) ||
+            IsSideVisible(p + Vector3Int.back,AbstractShape.Direction.Front) || 
+            IsSideVisible(p + Vector3Int.left,AbstractShape.Direction.Right) || 
+            IsSideVisible(p + Vector3Int.right,AbstractShape.Direction.Left);
+
     }
 
     public Visibility GetVisibilityAmt(int x, int y, int z){

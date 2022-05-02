@@ -40,6 +40,18 @@
                 }
             }
         },
+        "pink tourmaline": {
+            "defaultTexture": "RoseQuartz",
+            "shapes": {
+                "wall": {
+                    "model": "TourmalineWall"
+                }
+            }
+        },
+        "black pyrope": {
+            "defaultTexture": "BlackZircon",
+            "shapes": { "wall":  { "model": "TourmalineWall" }}
+        },
         "picture jasper": {
             "defaultTexture": "PictureJasper",
             "shapes":{
@@ -48,6 +60,10 @@
                     "shape": "Wall"
                 }
             }
+        },
+        "black zircon": {
+            "defaultTexture": "BlackZircon",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
         },
         "green zircon": {
             "defaultTexture": "GreenZircon",
@@ -63,6 +79,14 @@
         },
         "purple spinel":{
             "defaultTexture": "PurpleSpinel",
+            "shapes": { "wall":  { "model": "ZirconWall" }}
+        },
+        "violet spessartine":{
+            "defaultTexture": "PurpleSpinel",
+            "shapes": { "wall":  { "model": "GenericCrystal" }}
+        },
+        "alexandrite":{
+            "defaultTexture": "Alexandrite",
             "shapes": { "wall":  { "model": "ZirconWall" }}
         },
         "rose quartz": {
@@ -138,6 +162,15 @@
                 }
             }
         },
+        "honey yellow beryl": {
+            "defaultTexture": "HoneyYellowBeryl",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
         "prase": {
             "defaultTexture": "Prase",
             "shapes": { "wall": { "model": "TanzaniteWall" } }
@@ -176,7 +209,7 @@
         },
         "morganite": {
             "defaultTexture": "RoseQuartz",
-            "shapes": { "wall": {"model": "TourmalineWall"} }
+            "shapes": { "wall": {"model": "GenericCrystal"} }
         },
         "blue garnet": {
             "defaultTexture": "BlueGarnet",
@@ -190,13 +223,57 @@
             "defaultTexture": "Moonstone",
             "shapes": { "wall": { "model": "GarnetWall" } }
         },
+        "bone opal": {
+            "defaultTexture": "LevinOpal",
+            "shapes": { "wall": { "model": "GenericCrystal" } }
+        },
         "levin opal": {
             "defaultTexture": "LevinOpal",
             "shapes": { "wall": { "model": "GarnetWall" } }    
         },
+        "harlequin opal": {
+            "defaultTexture": "LevinOpal",
+            "shapes": { "wall": { "model": "ZirconWall" } }    
+        },
+        "bandfire opal": {
+            "defaultTexture": "LevinOpal",
+            "shapes": { "wall": { "model": "ZirconWall" } }    
+        },
+        "claro opal": {
+            "defaultTexture": "ClearGarnet",
+            "shapes": { "wall": { "model": "ZirconWall" } }    
+        },
+        "white opal": {
+            "defaultTexture": "ClearGarnet",
+            "shapes": { "wall": { "model": "ZirconWall" } }    
+        },
+        "shell opal": {
+            "defaultTexture": "ShellOpal",
+            "shapes": { "wall": { "model": "ZirconWall" } }    
+        },
+        "wax opal": {
+            "defaultTexture": "WaxOpal",
+            "shapes": { "wall": { "model": "ZirconWall" } }    
+        },
+        "moss opal": {
+            "defaultTexture": "MossOpal",
+            "shapes": { "wall": { "model": "ZirconWall" } }    
+        },
         "red flash opal": {
             "defaultTexture": "RedFlashOpal",
             "shapes": { "wall": { "model": "GarnetWall" } }    
+        },
+        "rubicelle": {
+            "defaultTexture": "Rubicelle",
+            "shapes": { "wall":  { "model": "ZirconWall" }} 
+        },
+        "aquamarine": {
+            "defaultTexture": "Aquamarine",
+            "shapes": { "wall": { "model": "GarnetWall" } }    
+        },
+        "topaz": {
+            "defaultTexture": "Topaz",
+            "shapes": { "wall": { "model": "ZirconWall" } }
         }
     }
 }

@@ -31,6 +31,7 @@ namespace ModelImplementation
             var color = materialManager.GetMaterial2(matdef).DefaultTexture;
 
             normal.AddToMesh(verts,uvs,indices,color,tp);
+
             if (world.IsSideVisible(wp + Vector3Int.down,AbstractShape.Direction.Up)){
                 bottom.AddToMesh(verts,uvs,indices,color,tp);
             }

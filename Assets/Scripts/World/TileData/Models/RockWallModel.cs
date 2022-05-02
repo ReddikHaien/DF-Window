@@ -37,30 +37,37 @@ namespace ModelImplementation{
             var layer = GetColor(remote, materialManager, tile.LayerMaterial);
             var vein = GetColor(remote, materialManager, tile.VeinMaterial);
 
+            var noVein = remote.GetMaterialDefinition(tile.VeinMaterial).Name == "empty";
+            
+
             if (world.IsSideVisible(wp + Vector3Int.up, AbstractShape.Direction.Down)){
                 top.Item1.AddToMesh(verts,uvs,indices,layer,tp);
-                top.Item2.AddToMesh(verts,uvs,indices,vein,tp);
+                if (!noVein) top.Item2.AddToMesh(verts,uvs,indices,vein,tp);
             }
+            if (world.IsSideVisible(wp + Vector3Int.forward, AbstractShape.Direction.Back)){
+                back.Item1.AddToMesh(verts,uvs,indices,layer,tp);
+                if (!noVein) back.Item2.AddToMesh(verts,uvs,indices,vein,tp);
+            }
+            if (world.IsSideVisible(wp + Vector3Int.back, AbstractShape.Direction.Front)){
+                front.Item1.AddToMesh(verts,uvs,indices,layer,tp);
+                if (!noVein) front.Item2.AddToMesh(verts,uvs,indices,vein,tp);
+            }
+            if (world.IsSideVisible(wp + Vector3Int.left, AbstractShape.Direction.Right)){
+                right.Item1.AddToMesh(verts,uvs,indices,layer,tp);
+                if (!noVein) right.Item2.AddToMesh(verts,uvs,indices,vein,tp);
+            }
+            if (world.IsSideVisible(wp + Vector3Int.right, AbstractShape.Direction.Left)){
+                left.Item1.AddToMesh(verts,uvs,indices,layer,tp);
+                if (!noVein) left.Item2.AddToMesh(verts,uvs,indices,vein,tp);
+            }
+            
+
+            
             if (world.IsSideVisible(wp + Vector3Int.down, AbstractShape.Direction.Up)){
                 bottom.Item1.AddToMesh(verts,uvs,indices,layer,tp);
                 bottom.Item2.AddToMesh(verts,uvs,indices,vein,tp);
             }
-            if (world.IsSideVisible(wp + Vector3Int.forward, AbstractShape.Direction.Back)){
-                back.Item1.AddToMesh(verts,uvs,indices,layer,tp);
-                back.Item2.AddToMesh(verts,uvs,indices,vein,tp);
-            }
-            if (world.IsSideVisible(wp + Vector3Int.back, AbstractShape.Direction.Front)){
-                front.Item1.AddToMesh(verts,uvs,indices,layer,tp);
-                front.Item2.AddToMesh(verts,uvs,indices,vein,tp);
-            }
-            if (world.IsSideVisible(wp + Vector3Int.left, AbstractShape.Direction.Right)){
-                right.Item1.AddToMesh(verts,uvs,indices,layer,tp);
-                right.Item2.AddToMesh(verts,uvs,indices,vein,tp);
-            }
-            if (world.IsSideVisible(wp + Vector3Int.right, AbstractShape.Direction.Left)){
-                left.Item1.AddToMesh(verts,uvs,indices,layer,tp);
-                left.Item2.AddToMesh(verts,uvs,indices,vein,tp);
-            }
+            
         }
 
         private Vector4 GetColor(RemoteManager remote, MaterialManager manager, MatPair matpair){

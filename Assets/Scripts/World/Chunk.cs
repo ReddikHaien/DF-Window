@@ -50,15 +50,17 @@ public class Chunk : MonoBehaviour, ChunkEvent
             for (int y = 0; y < Chunk.WIDTH; y++){
                 for (int z = 0; z < Chunk.WIDTH; z++){
                     
+                    if (!world.isTileVisible(new Vector3Int(chunkPosition.x*WIDTH + x, chunkPosition.y + y, chunkPosition.z*WIDTH + z))){
+                        continue;
+                    }
+
                     var tile = world.GetTile(chunkPosition.x*WIDTH + x, chunkPosition.y + y, chunkPosition.z*WIDTH + z);
 
                     if (tile == null){
                         continue;
                     }
-                    if (!tile.Hidden){
 
-                        remote.TileDataManager.CreateMeshForTile(world,tile,chunkPosition,x,y,z,verts,uvs,inds);
-                    }
+                    remote.TileDataManager.CreateMeshForTile(world,tile,chunkPosition,x,y,z,verts,uvs,inds);
                 }
             }
         }

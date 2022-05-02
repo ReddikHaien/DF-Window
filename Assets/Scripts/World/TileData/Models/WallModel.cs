@@ -59,14 +59,6 @@ namespace ModelImplementation{
                 
                 top.AddToMesh(verts,uvs,indices,color,tp);
             }
-            if(world.IsSideVisible(wp + Vector3Int.down,AbstractShape.Direction.Up)){
-                var color = 
-                    GetColoring(baseColors,"top") ?? 
-                    GetColoring(baseColors,"all") ?? 
-                    GetDefaultTexture(remote,materialManager,tile);
-                
-                bottom.AddToMesh(verts,uvs,indices,color,tp);
-            }
             if (world.IsSideVisible(wp + Vector3Int.forward, AbstractShape.Direction.Back)){
                 var color = 
                     GetColoring(baseColors,"front") ??
@@ -103,6 +95,18 @@ namespace ModelImplementation{
                 
                 left.AddToMesh(verts,uvs,indices,color,tp);
             }
+            
+
+            
+            if(world.IsSideVisible(wp + Vector3Int.down,AbstractShape.Direction.Up)){
+                var color = 
+                    GetColoring(baseColors,"top") ?? 
+                    GetColoring(baseColors,"all") ?? 
+                    GetDefaultTexture(remote,materialManager,tile);
+                
+                bottom.AddToMesh(verts,uvs,indices,color,tp);
+            }
+            
         }
 
 
