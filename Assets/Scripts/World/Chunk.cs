@@ -97,7 +97,10 @@ public class Chunk : MonoBehaviour, ChunkEvent
         
         if (completedChunks >= world.ChunkCount){
             var b = new StringBuilder();
-            foreach(var entry in missingEls){
+
+            var entries = missingEls.AsEnumerable().ToList();
+
+            foreach(var entry in missingEls.AsEnumerable().OrderBy(x => x.Key)){
                 b.Append(entry.Key);
                 b.Append('\n');
             }

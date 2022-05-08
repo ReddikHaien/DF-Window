@@ -4,6 +4,10 @@
         "shapes": {
             "wall":{
                 "shape":"Empty"
+            },
+            "floor":{
+                "shape": "Floor",
+                "model": "Floor"
             }
         }
     },
@@ -14,6 +18,24 @@
         },
         "picture jasper": {
             "defaultTexture": "PictureJasper",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "turquoise": {
+            "defaultTexture": "Turquoise",
+            "shapes":{
+                "wall":{
+                    "model": "Wall",
+                    "shape": "Wall"
+                }
+            }
+        },
+        "tigereye": {
+            "defaultTexture": "TigerEye",
             "shapes":{
                 "wall":{
                     "model": "Wall",

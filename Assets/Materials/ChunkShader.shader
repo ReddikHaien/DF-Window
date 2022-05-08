@@ -54,6 +54,10 @@ Shader "Custom/ChunkShader"
 
             c.a = l2.a;
 
+            if (c.a == 0){
+                discard;
+            }
+
             c *= IN.vertex_color;
 
             o.Albedo = c.rgb;

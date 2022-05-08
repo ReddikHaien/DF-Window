@@ -1,0 +1,19 @@
+{
+    "defaults": {
+        "shapes": {
+            "floor": {
+                "shape": "Floor",
+                "model": "Floor"
+            }
+        },
+        "defaultTexture": "GenericGrass"
+    },
+    "definitions": {
+        "white mountain heather plant": {},
+        "carpetgrass plant": {},
+        "dog's tooth grass plant": {},
+        "fescue grass plant": {},
+        "hair grass plant": {},
+        "meadow-grass plant": {}
+    }
+}

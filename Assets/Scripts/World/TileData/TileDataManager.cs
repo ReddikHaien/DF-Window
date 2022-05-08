@@ -37,6 +37,8 @@ public class TileDataManager
                 ("WoodWall", new WoodWallModel()),
                 ("RockWall", new RockWallModel()),
                 ("Floor", new FloorModel()),
+                ("MelonVine", new GenericFruitBushModel("WinterMelonVine")),
+                ("BubbleBulbPlant", new GenericPlantModel("BubbleBulbPlant")),
             }
         );
 
@@ -72,8 +74,9 @@ public class TileDataManager
         var matdef = remote.GetMaterialDefinition(tile.BaseMaterial);
         if  (matdef != null){
             var material = materialManager.GetMaterial2(matdef);
-            if (materialManager.isDefaultMaterial(material) && shape == RemoteFortressReader.TiletypeShape.Wall){
-                var mat = matdef.Name;
+
+            if (materialManager.isDefaultMaterial(material) || material.GetModelEntry(shape) == MaterialEntry2.defaultModel){
+                var mat = $"{matdef.Name} => {shape}";
                 Chunk.missingEls.TryAdd(mat,0);
             }
             var (_, model, coloring) = material.GetModelEntry(shape);

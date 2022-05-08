@@ -21,6 +21,20 @@ public class World : MonoBehaviour, WorldEvent
 
     private Tile[,,] tiles;
     private Vector3Int size;
+
+    private readonly Tile defaultTile = new Tile{
+        BaseMaterial = new MatPair(0,-1),
+        ConstructionMaterial = new MatPair(0,-1),
+        Hidden = true,
+        LayerMaterial = new MatPair(0,-1),
+        MagmaLevel = 0,
+        Material = new MatPair(0,-1),
+        RampType = 0,
+        TileType = 0,
+        TrunkPercent = 0,
+        VeinMaterial = new MatPair(0,-1),
+        WaterLevel = 0
+    };
     void Start()
     {
         var manager = RemoteManager.Instance;
@@ -68,9 +82,9 @@ public class World : MonoBehaviour, WorldEvent
 
     public Tile GetTile(int x, int y, int z){
         if (x < 0 || x >= size.x*16 || y < 0 || y >= size.y || z < 0 || z >= size.z*16){
-            return null;
+            return defaultTile;
         }
-        return tiles[x,y,z];
+        return tiles[x,y,z] ?? defaultTile;
     }
 
     public bool IsSideVisible(Vector3Int position, AbstractShape.Direction direction){

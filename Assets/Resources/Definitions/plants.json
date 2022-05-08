@@ -1,0 +1,22 @@
+{
+    "defaults":{
+        "shapes": {
+            "floor": {
+                "shape": "Floor"
+            }
+        },
+        "defaultTexture": "GenericGrass"
+    },
+    "definitions": {
+        "bubble bulb plant": {
+            "shapes": {
+                "floor": {
+                    "model": "BubbleBulbPlant",
+                    "coloring": {
+                        "plant": "BubbleBulb"
+                    }
+                }
+            }
+        }
+    }
+}

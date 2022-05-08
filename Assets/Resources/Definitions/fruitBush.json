@@ -1,0 +1,34 @@
+{
+    "defaults": {
+        "shapes": {
+            "Shrub": {
+                "shape": "Floor"
+            }
+        },
+        "defaultTexture": "GenericGrass"
+    },
+    "definitions": {
+        "winter melon vine plant": {
+            "shapes":{
+                "Shrub":{
+                    "model": "MelonVine",
+                    "coloring":{
+                        "bush": "MelonVineBush",
+                        "fruit": "WinterMelonVineFruit"
+                    }
+                }
+            }
+        },
+        "bitter melon vine plant": {
+            "shapes":{
+                "Shrub":{
+                    "model": "MelonVine",
+                    "coloring":{
+                        "bush": "MelonVineBush",
+                        "fruit": "BitterMelonVineFruit"
+                    }
+                }
+            }
+        }
+    }
+}

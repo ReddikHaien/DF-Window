@@ -8,6 +8,10 @@
                     "wood":"DatePalmWood"
                 },
                 "shape":"WoodWall"
+            },
+            "floor":{
+                "shape": "Floor",
+                "model": "Floor"
             }
         }
     },
