@@ -31,6 +31,8 @@ namespace TileDataBuilder{
 
         public Vector4 GetUv(string name) => uvs.TryGetValue(name, out var x) ? x : uvs["DefaultTexture"];
 
+        public Dictionary<string,Vector4> GetUvList() => uvs;
+
         public Texture2D CreateTexture(){
 
             var textures = this.textures.AsEnumerable().ToList();

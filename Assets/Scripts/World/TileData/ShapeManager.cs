@@ -17,27 +17,10 @@ public class ShapeManager
     public ShapeManager(TextureManager textureManager){
         FLOOR = new FloorShape();
         EMPTY = new EmptyShape();
-        BOULDER = new BoulderShape(textureManager);
+        BOULDER = new BoulderShape();
         WALL = new WallShape();
         RAMP = new RampShape();
         TRUNK_BRANCH = new TrunkBranchShape();
         BUSH = new BushShape();
-    }
-
-    public void GetTileShape(Tile tile){
-
-    }
-
-    public AbstractShape GetShape(RemoteFortressReader.Tiletype type){
-        return type.Shape switch {
-            RemoteFortressReader.TiletypeShape.Floor => FLOOR,
-            RemoteFortressReader.TiletypeShape.Boulder => BOULDER,
-            RemoteFortressReader.TiletypeShape.Wall => WALL,
-            //RemoteFortressReader.TiletypeShape.TreeShape => WALL,
-            RemoteFortressReader.TiletypeShape.Ramp => RAMP,
-            RemoteFortressReader.TiletypeShape.TrunkBranch => TRUNK_BRANCH,
-            RemoteFortressReader.TiletypeShape.Sapling => BUSH,
-            _ => EMPTY
-        };
     }
 }

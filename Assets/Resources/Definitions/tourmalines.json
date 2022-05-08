@@ -1,0 +1,28 @@
+{
+    "defaults": {
+        "category": "crystal",
+        "shapes": {
+            "wall":{
+                "shape":"Wall",
+                "model": "Wall"
+            }
+        }
+    },
+    "definitions": {
+        "clear tourmaline": {
+            "defaultTexture": "ClearTourmaline"
+        },
+        "red tourmaline": {
+            "defaultTexture": "RedTourmaline"
+        },
+        "green tourmaline": {
+            "defaultTexture": "GreenTourmaline"
+        },
+        "indigo tourmaline": {
+            "defaultTexture": "IndigoTourmaline"
+        },
+        "pink tourmaline": {
+            "defaultTexture": "RoseQuartz"
+        }
+    }
+}

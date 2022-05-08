@@ -5,6 +5,10 @@
             "wall":{
                 "model": "Wall",
                 "shape": "Wall"
+            },
+            "floor": {
+                "model": "Floor",
+                "shape": "Floor"
             }
         }
     },
@@ -12,6 +16,10 @@
         "empty": {
             "shapes": {
                 "wall": {
+                    "model": "Empty",
+                    "shape": "Empty"
+                },
+                "floor": {
                     "model": "Empty",
                     "shape": "Empty"
                 }

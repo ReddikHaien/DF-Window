@@ -13,12 +13,10 @@ namespace ModelImplementation{
         public abstract void AddMesh(
             RemoteManager remote,
             World world,
+            ChunkMeshBuilder builder,
             Vector3Int chunkPosition,
             Vector3Int tilePosition,
             Tile tile,
-            List<Vector3> verts,
-            List<Vector2> uvs,
-            List<int> indices,
             Dictionary<string,Vector4> baseColors,
             MaterialManager materialManager
         );

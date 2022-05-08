@@ -22,6 +22,7 @@ public class TileDataManager
             new (string,AbstractShape)[]{
                 ("Empty", new EmptyShape()),
                 ("Wall", new WallShape()),
+                ("Floor", new FloorShape()),
                 ("WoodWall", new WoodWallShape()),
             }.AsEnumerable(),
 
@@ -34,7 +35,8 @@ public class TileDataManager
                 ("GarnetWall", new SimpleModel("GarnetWall", true)),
                 ("GenericCrystal", new SimpleModel("Crystal",true)),
                 ("WoodWall", new WoodWallModel()),
-                ("RockWall", new RockWallModel())
+                ("RockWall", new RockWallModel()),
+                ("Floor", new FloorModel()),
             }
         );
 
@@ -55,9 +57,7 @@ public class TileDataManager
         Tile tile, 
         Vector3Int chunkPos,
         int x, int y, int z,
-        List<Vector3> verts,
-        List<Vector2> uvs,
-        List<int> indices){
+        ChunkMeshBuilder builder){
         
         var remote = RemoteManager.Instance;
 
@@ -77,7 +77,7 @@ public class TileDataManager
                 Chunk.missingEls.TryAdd(mat,0);
             }
             var (_, model, coloring) = material.GetModelEntry(shape);
-            model.AddMesh(remote,world,chunkPos, new Vector3Int(x,y,z),tile, verts, uvs, indices, coloring, materialManager);
+            model.AddMesh(remote, world,builder,chunkPos, new Vector3Int(x,y,z),tile, coloring, materialManager);
         }
     }
 }

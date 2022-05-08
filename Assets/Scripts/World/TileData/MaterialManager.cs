@@ -215,6 +215,8 @@ public class MaterialEntry2{
     
     private readonly MaterialManager.MaterialCategory category;
 
+    private readonly Color color;
+
     public MaterialEntry2(
         Vector4 defaultTexture,
         Dictionary<RemoteFortressReader.TiletypeShape,(AbstractShape,AbstractModel,Dictionary<string,Vector4>)> models,

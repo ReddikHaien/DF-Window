@@ -52,6 +52,9 @@ namespace TileDataBuilder{
 
         public (TextureManager, MaterialManager) BuildManagers(){
             var textureBuilder = new TextureBuilder();
+
+            textureBuilder.AddTexture(new ResourceTexture("RockMineralPattern"));
+
             foreach(var x in entries){
                 textureBuilder.AddTexture(x.Value.DefaultTexture);
                 foreach (var y in x.Value.Models){
@@ -100,7 +103,7 @@ namespace TileDataBuilder{
                 MaterialManager.MaterialCategory.Stone
             ),
             (shapes["Empty"],models["Empty"],new Dictionary<string, Vector4>()));
-            var textureManager = new TextureManager(texture);
+            var textureManager = new TextureManager(texture, textureBuilder.GetUvList());
 
             return (textureManager, materialManager);
         }

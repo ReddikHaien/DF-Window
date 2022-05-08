@@ -40,6 +40,9 @@ public class World : MonoBehaviour, WorldEvent
         var texture = manager.TileDataManager.textureManager.CreateTexture();
 
         chunkMaterial.SetTexture("_MainTex",texture);
+        chunkMaterial.SetTexture("_MainTex2",texture);
+        chunkMaterial.SetTexture("_MainTex3",texture);
+
 
         StartCoroutine(nameof(ChunkCreators));
     }

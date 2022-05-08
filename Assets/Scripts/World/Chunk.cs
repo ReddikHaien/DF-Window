@@ -44,7 +44,7 @@ public class Chunk : MonoBehaviour, ChunkEvent
         }
     }
 
-    public void CreateMeshData(List<Vector3> verts, List<Vector2> uvs, List<int> inds){
+    public void CreateMeshData(ChunkMeshBuilder builder){
         var remote = RemoteManager.Instance;
         for (int x = 0; x < Chunk.WIDTH; x++){
             for (int y = 0; y < Chunk.WIDTH; y++){
@@ -60,7 +60,7 @@ public class Chunk : MonoBehaviour, ChunkEvent
                         continue;
                     }
 
-                    remote.TileDataManager.CreateMeshForTile(world,tile,chunkPosition,x,y,z,verts,uvs,inds);
+                    remote.TileDataManager.CreateMeshForTile(world,tile,chunkPosition,x,y,z,builder);
                 }
             }
         }
@@ -76,10 +76,8 @@ public class Chunk : MonoBehaviour, ChunkEvent
     private static int completedChunks = 0;
 
     IEnumerator WaiterRoutine(){
-        var verts = new List<Vector3>();
-        var uvs = new List<Vector2>();
-        var inds = new List<int>();
-        var task = Task.Factory.StartNew(() => CreateMeshData(verts,uvs,inds));
+        var builder = new ChunkMeshBuilder();
+        var task = Task.Factory.StartNew(() => CreateMeshData(builder));
 
         while(!task.IsCompleted){
             yield return new WaitForSeconds(0.1f);
@@ -91,12 +89,7 @@ public class Chunk : MonoBehaviour, ChunkEvent
             Debug.LogError(log);
         }
 
-        mesh.Clear();
-        mesh.vertices = verts.ToArray();
-        mesh.uv = uvs.ToArray();
-        mesh.triangles = inds.ToArray();
-        mesh.RecalculateBounds();
-        mesh.RecalculateNormals();
+        builder.BuildMesh(mesh);
 
         completedChunks++;
         

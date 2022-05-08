@@ -29,17 +29,7 @@ namespace ModelImplementation{
 
         public override string Name => "wall";
 
-        public override void AddMesh(
-            RemoteManager remote,
-            World world,
-            Vector3Int chunkPosition,
-            Vector3Int tilePosition,
-            Tile tile,
-            List<Vector3> verts,
-            List<Vector2> uvs,
-            List<int> indices,
-            Dictionary<string,Vector4> baseColors,
-            MaterialManager materialManager)
+        public override void AddMesh(RemoteManager remote, World world, ChunkMeshBuilder builder, Vector3Int chunkPosition, Vector3Int tilePosition, Tile tile, Dictionary<string, Vector4> baseColors, MaterialManager materialManager)
         {
             var wp = new Vector3Int(chunkPosition.x * Chunk.WIDTH,chunkPosition.y,chunkPosition.z*Chunk.WIDTH) + tilePosition;
             var tp = new Vector3Int(tilePosition.x*Chunk.TILE_WIDTH,tilePosition.y*Chunk.TILE_HEIGHT,tilePosition.z*Chunk.TILE_WIDTH);
@@ -50,14 +40,14 @@ namespace ModelImplementation{
             // ALLE SIDENE UTENOM TOP OG BOTTOM ER SPEILVENDTE
             //
             //====================================
-            
+
             if (world.IsSideVisible(wp + Vector3Int.up,AbstractShape.Direction.Down)){
                 var color = 
                     GetColoring(baseColors,"top") ?? 
                     GetColoring(baseColors,"all") ?? 
                     GetDefaultTexture(remote,materialManager,tile);
                 
-                top.AddToMesh(verts,uvs,indices,color,tp);
+                builder.AddModel(top,tp,color);
             }
             if (world.IsSideVisible(wp + Vector3Int.forward, AbstractShape.Direction.Back)){
                 var color = 
@@ -65,8 +55,7 @@ namespace ModelImplementation{
                     GetColoring(baseColors,"sides") ?? 
                     GetColoring(baseColors,"all") ?? 
                     GetDefaultTexture(remote,materialManager,tile);
-                
-                back.AddToMesh(verts,uvs,indices,color,tp);
+                builder.AddModel(back,tp,color);                
             }
             if (world.IsSideVisible(wp + Vector3Int.back, AbstractShape.Direction.Front)){
                 var color = 
@@ -74,8 +63,7 @@ namespace ModelImplementation{
                     GetColoring(baseColors,"sides") ?? 
                     GetColoring(baseColors,"all") ?? 
                     GetDefaultTexture(remote,materialManager,tile);
-                
-                front.AddToMesh(verts,uvs,indices,color,tp);
+                builder.AddModel(front,tp,color);                
             }
             if (world.IsSideVisible(wp + Vector3Int.left, AbstractShape.Direction.Right)){
                 var color = 
@@ -83,8 +71,7 @@ namespace ModelImplementation{
                     GetColoring(baseColors,"sides") ?? 
                     GetColoring(baseColors,"all") ?? 
                     GetDefaultTexture(remote,materialManager,tile);
-                
-                right.AddToMesh(verts,uvs,indices,color,tp);
+                builder.AddModel(right,tp,color);
             }
             if (world.IsSideVisible(wp + Vector3Int.right, AbstractShape.Direction.Left)){
                 var color = 
@@ -92,23 +79,16 @@ namespace ModelImplementation{
                     GetColoring(baseColors,"sides") ?? 
                     GetColoring(baseColors,"all") ?? 
                     GetDefaultTexture(remote,materialManager,tile);
-                
-                left.AddToMesh(verts,uvs,indices,color,tp);
+                builder.AddModel(left,tp,color);    
             }
-            
-
-            
             if(world.IsSideVisible(wp + Vector3Int.down,AbstractShape.Direction.Up)){
                 var color = 
                     GetColoring(baseColors,"top") ?? 
                     GetColoring(baseColors,"all") ?? 
                     GetDefaultTexture(remote,materialManager,tile);
-                
-                bottom.AddToMesh(verts,uvs,indices,color,tp);
+                builder.AddModel(bottom,tp,color);
             }
-            
         }
-
 
         private Vector4 GetDefaultTexture(RemoteManager remote, MaterialManager manager, Tile tile){
 
@@ -119,7 +99,8 @@ namespace ModelImplementation{
         private Vector4? GetColoring(Dictionary<string,Vector4> baseColors, string name){
             return baseColors.TryGetValue(name, out var x) ? x : null;
         }
-         
+
+        
     }
 }
 

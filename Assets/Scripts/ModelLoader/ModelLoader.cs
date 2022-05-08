@@ -49,17 +49,18 @@ namespace ModelLoading{
             indices.AddRange(this.indices.AsEnumerable().Select(x => x + count));
         }
 
-        public void AddToMesh(List<Vector3> verts, List<Vector2> uvs, List<int> indices, Vector4 color, Vector3Int position){
+        public void AddToMesh(List<Vector3> verts, List<Vector2> uvs, List<int> indices, List<Color> colors, Vector4 texcoord, Color color, Vector3Int position){
             var p = (Vector3)position;
-            var cs = new Vector2(color.z,color.w);
-            var cp = new Vector2(color.x,color.y);
+            var cs = new Vector2(texcoord.z,texcoord.w);
+            var cp = new Vector2(texcoord.x,texcoord.y);
             var count = verts.Count;
             verts.AddRange(this.verts.AsEnumerable().Select(x => x + p));
             uvs.AddRange(this.uvs.AsEnumerable().Select(x => x*cs+cp));
+            colors.AddRange(this.verts.Select(x => color));
             indices.AddRange(this.indices.AsEnumerable().Select(x => x + count));
         }
 
-        public void CreateNewUvs(bool randomizePositions = false, float scale = 6.0f){
+        public void CreateNewUvs(bool randomizePositions = false, float scale = 3.0f){
             var uvs = new Vector2[verts.Length];
             for (int i = 0; i < indices.Length; i += 3){
                 var a = verts[indices[i]];
@@ -83,9 +84,9 @@ namespace ModelLoading{
                 var tb = RotatePoint(b,mat);
                 var tc = RotatePoint(c,mat);
 
-                var uva = new Vector2(ta.x*2.0f,ta.y);
-                var uvb = new Vector2(tb.x*2.0f,tb.y);
-                var uvc = new Vector2(tc.x*2.0f,tc.y);
+                var uva = new Vector2(ta.x,ta.y);
+                var uvb = new Vector2(tb.x,tb.y);
+                var uvc = new Vector2(tc.x,tc.y);
 
                 uva = (uva) / scale;
                 uvb = (uvb) / scale;

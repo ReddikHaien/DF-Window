@@ -8,46 +8,6 @@
         }
     },
     "definitions": {
-        "clear tourmaline": {
-            "defaultTexture": "ClearTourmaline",
-            "shapes": {
-                "wall": {
-                    "model": "TourmalineWall"
-                }
-            }
-        },
-        "red tourmaline": {
-            "defaultTexture": "RedTourmaline",
-            "shapes": {
-                "wall": {
-                    "model": "TourmalineWall"
-                }
-            }
-        },
-        "green tourmaline": {
-            "defaultTexture": "GreenTourmaline",
-            "shapes": {
-                "wall": {
-                    "model": "TourmalineWall"
-                }
-            }
-        },
-        "indigo tourmaline": {
-            "defaultTexture": "IndigoTourmaline",
-            "shapes": {
-                "wall": {
-                    "model": "TourmalineWall"
-                }
-            }
-        },
-        "pink tourmaline": {
-            "defaultTexture": "RoseQuartz",
-            "shapes": {
-                "wall": {
-                    "model": "TourmalineWall"
-                }
-            }
-        },
         "black pyrope": {
             "defaultTexture": "BlackZircon",
             "shapes": { "wall":  { "model": "TourmalineWall" }}

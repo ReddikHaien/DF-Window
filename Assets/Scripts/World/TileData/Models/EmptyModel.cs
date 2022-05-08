@@ -9,10 +9,7 @@ namespace ModelImplementation {
     {
         public override string Name => "Empty";
 
-        public override void AddMesh(RemoteManager remote, World world, Vector3Int chunkPosition, Vector3Int tilePosition, Tile tile, List<Vector3> verts, List<Vector2> uvs, List<int> indices, Dictionary<string,Vector4> baseColors, MaterialManager materialManager)
-        {
-        
-        }
-
+        public override void AddMesh(RemoteManager remote, World world, ChunkMeshBuilder builder, Vector3Int chunkPosition, Vector3Int tilePosition, Tile tile, Dictionary<string, Vector4> baseColors, MaterialManager materialManager)
+        {}
     }
 }
