@@ -24,7 +24,16 @@ public class ChunkMeshBuilder{
     public void AddModel(
         Model model, 
         Vector3 position,
-        Vector4 baseLayer, Vector4? layer1 = null, Vector4? layer2 = null, Color32? color = null){
+        Vector4 baseLayer,
+        Vector4? layer1 = null,
+        Vector4? layer2 = null,
+        Color32? color = null,
+        float yRotation = 0.0f){
+        
+        var quat = Quaternion.AngleAxis(yRotation,Vector3.up);
+
+        var center = new Vector3(1.5f,0.0f,1.5f);
+
         int icount = this.verts.Count;
         Vector4 l1 = layer1 ?? baseLayer;
         Vector4 l2 = layer2 ?? baseLayer;
@@ -32,7 +41,12 @@ public class ChunkMeshBuilder{
 
         var venum = model.verts.AsEnumerable();
         var uvenum = model.uvs.AsEnumerable();
-        verts.AddRange(venum.Select(x => x + position));
+        verts.AddRange(venum.Select(x => {
+            var d = x - center;
+            d = quat * d;
+
+            return (d + center) + position;
+            }));
 
         baseUvs.AddRange(uvenum.Select(x => x*new Vector2(baseLayer.z,baseLayer.w) + new Vector2(baseLayer.x,baseLayer.y)));
         layer1Uvs.AddRange(uvenum.Select(x => x*new Vector2(l1.z,l1.w) + new Vector2(l1.x,l1.y)));

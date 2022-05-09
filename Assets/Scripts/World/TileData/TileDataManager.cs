@@ -39,6 +39,7 @@ public class TileDataManager
                 ("Floor", new FloorModel()),
                 ("MelonVine", new GenericFruitBushModel("WinterMelonVine")),
                 ("BubbleBulbPlant", new GenericPlantModel("BubbleBulbPlant")),
+                ("Ramp", new RampModel())
             }
         );
 

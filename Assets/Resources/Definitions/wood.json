@@ -12,6 +12,10 @@
             "floor":{
                 "shape": "Floor",
                 "model": "Floor"
+            },
+            "ramp":{
+                "shape": "Floor",
+                "model": "Ramp"
             }
         }
     },
