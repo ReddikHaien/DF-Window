@@ -5,6 +5,14 @@
             "wall":{
                 "shape":"Wall",
                 "model": "Wall"
+            },
+            "floor": {
+                "shape": "Floor",
+                "model": "Floor"
+            },
+            "ramp": {
+                "shape": "Floor",
+                "model": "Ramp"
             }
         }
     },

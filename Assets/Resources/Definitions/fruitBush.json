@@ -3,6 +3,10 @@
         "shapes": {
             "Shrub": {
                 "shape": "Floor"
+            },
+            "ramp": {
+                "shape": "Floor",
+                "model": "Ramp"
             }
         },
         "defaultTexture": "GenericGrass"

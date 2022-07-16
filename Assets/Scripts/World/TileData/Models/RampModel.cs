@@ -18,6 +18,8 @@ namespace ModelImplementation{
             edge = models.AsEnumerable().First().Value;
             var cornerOutModels = ModelLoader.LoadModel("Models/RampCornerOutwards");
             cornerOut = cornerOutModels.AsEnumerable().First().Value;
+            var cornerInModels = ModelLoader.LoadModel("Models/RampCornerInwards");
+            cornerIn = cornerInModels.AsEnumerable().First().Value;
         }
 
         public override string Name => "Ramp";
@@ -76,6 +78,33 @@ namespace ModelImplementation{
                 //00#
                 else if (pznx && !pzpx && !nznx && !nzpx && !nx && !pz){
                     builder.AddModel(cornerOut,tp,material, yRotation: 90.0f);    
+                }
+                //0##
+                //0|#
+                //000
+                else if (pzpx && pz && px && !nzpx){
+                    builder.AddModel(cornerIn,tp,material,yRotation: 180.0f);
+                }
+                //000
+                //0|#
+                //0##
+                else if (pznx && pz && nx && !nzpx){
+                    builder.AddModel(cornerIn,tp,material,yRotation: 90.0f);
+                }
+                //000
+                //#|0
+                //##0
+                else if (nznx && nz && nx && !pzpx){
+                    builder.AddModel(cornerIn,tp,material);
+                }
+                //##0
+                //#|0
+                //000
+                else if (nzpx && nz && px && !pznx){
+                    builder.AddModel(cornerIn,tp,material,yRotation: -90.0f);
+                }
+                else{
+                    FloorModel.AddFloor(remote,world,builder,chunkPosition,tilePosition,tile,baseColors,materialManager);
                 }
             }
         }
